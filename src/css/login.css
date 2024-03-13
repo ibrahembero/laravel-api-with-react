@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #F7F7F7;
+}
+
+/* .header {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 180px;
+    height: 100px;
+} */
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1024px;
+}
+
+.content {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1E232C;
+    width: 424px;
+    height: 1024px;
+}
+.content .subscribe{
+  margin: 60px auto;
+
+}
+
+.content h1 , p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+p{
+    text-wrap: wrap;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.login-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.login-form a.forgot-password {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.login-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px;
+}
+
+.login-form button[type="button"] {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 300px;
+}
+
+.login-form button[type="button"].google {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #4285F4;
+    background-color: #d8e7d8;
+}
+
+.register {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.back{
+    color: #4CAF50;
+    text-decoration: none;
+}

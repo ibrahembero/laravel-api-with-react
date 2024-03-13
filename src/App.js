@@ -17,6 +17,9 @@ import UploadImage from './components/UploadImage';
 import Posts from './components/Posts';
 import EditPost from './components/EditPost';
 import CreatePost from './components/CreatePost';
+import Home from './otherComponents/Home';
+import LoginPage from './otherComponents/LoginPage';
+import SignUpPage from './otherComponents/SignUpPage';
 
 const NotFound = ()=>{
   return <h1>Not Found</h1>
@@ -47,17 +50,21 @@ useEffect(()=>{
     
       <div className="App">
         <BrowserRouter>
-          <Navbar />
+          {/* <Navbar /> */}
           {/* {authContext.auth ? <div className='container'><h1>Welcome To Our Website</h1></div> : <Navigate to={'/login'}/>}  */}
           {/* <Navbar authToken={authToken} />  */}
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/sign-up" element={<SignUpPage />} />
+            <Route path="/home" element={<HomePage />} />
+            {/* <Route path="/" element={<HomePage />} /> */}
             <Route path="/create" element={<CreatePost />} />
             <Route path="/edit/:id" element={<EditPost />} />
             <Route path="/posts" element={<Posts />} />
             <Route path="/personal-info" element={<PersonalInfo />} />
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/login" element={<Login />} />
+            {/* <Route path="/sign-up" element={<SignUp />} /> */}
+            {/* <Route path="/login" element={<Login />} /> */}
             <Route path="/uploadImage" element={<UploadImage />} />
             <Route  path="/not-found" element={<NotFound />}/>
             <Route  path="*" element={<Navigate to={'/not-found'}/>}/>

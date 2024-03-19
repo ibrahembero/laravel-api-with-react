@@ -1,0 +1,31 @@
+/* design grid */
+
+.smoothie-card {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: relative;
+  }
+.buttons{
+    text-align: right;
+  }
+.delete-link {
+    color: #bbb;
+    margin-left: 10px;
+    font-size: 1.2em;
+    padding: 6px;
+    background: #ec3034;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .edit-link {
+    color: #bbb;
+    margin-left: 10px;
+    font-size: 1.2em;
+    padding: 6px;
+    background: #02651b;
+    border-radius: 50%;
+    cursor: pointer;
+  }

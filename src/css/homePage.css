@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1024px;
+}
+
+.content {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1E232C;
+    width: 424px;
+    height: 1024px;
+}
+.content .subscribe{
+  margin: 60px auto;
+
+}
+
+.content h1 , p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+p{
+    text-wrap: wrap;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.login-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.login-form a.forgot-password {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 10px;
+    display: block;
+}

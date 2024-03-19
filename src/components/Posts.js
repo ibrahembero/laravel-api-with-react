@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../AuthContext';
 import { Link, Navigate, json } from 'react-router-dom';
 import PostDetails from './PostDetails';
+import "../css/posts.css"
+import Nav from '../otherComponents/Nav';
 
 
 function Posts(){
@@ -67,22 +69,27 @@ function Posts(){
    
     return (
         
-        <div className='container'>
-            {authContext.auth ? <div className='container'><h1>Welcome To Our Website</h1></div> : <Navigate to={'/login'}/>}
-
+        <div className='main-content-posts'>
+            <Nav />
             <div className='container'>
-                <div className='row'>
-                    <div className='col'>
-                        <h2>All Posts</h2>
-                    </div>
-                    <div className='col'>
-                    <Link className="btn btn-success" to={'/create'} >Create Your Own Post</Link>
+                
+                <div className='container header-main-posts'>
+                {authContext.auth ? <div className='container' style={{textAlign:"center"}}><h1>Welcome To Our Website</h1></div> : <Navigate to={'/login'}/>}
+
+                    <div className='row'>
+                        <div className='col'>
+                            <h2>All Posts</h2>
+                        </div>
+                        <div className='col'>
+                        <Link className="btn btn-success" to={'/create'} >Create Your Own Post</Link>
+                        </div>
                     </div>
                 </div>
-             </div>
-           
-            {postShow}
-       </div>
+                <div className="smoothie-grid">
+                  {postShow}
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../AuthContext';
 import { Navigate, useNavigate } from 'react-router-dom';
+import "../css/uploadimage.css"
+import Nav from '../otherComponents/Nav';
 
 function UploadImage(){
 
@@ -55,20 +57,23 @@ function UploadImage(){
 
     return (
     
-        <div className="container">
-             {authContext.auth ? <div className='container'><h1>Welcome To Our Website</h1></div> : <Navigate to={'/login'}/>}
+        <div className="main-image-uplaod">
+            <Nav />
+            <div className="container content-image-upload">
+                {authContext.auth ? <div className='container'><h1>Welcome To Our Website</h1></div> : <Navigate to={'/login'}/>}
 
-            {/* <h2>Upload Image Profile</h2>
-            <input type='file' name='file' onChange={handleImage} />
-            <button onClick={handleApi}>Submit</button> */}
-            <form onSubmit={handleSubmit} encType="multipart/form-data" >
-                <div className="mb-3">
-                    <label className="form-label">Image :</label><br/>
-                    <input type='file' className="form-control" name="image" onChange={e => setImage(e.target.files[0])} />
-                </div>
-                <br/>
-                <button type="submit" className="btn btn-success">Submit</button>
-            </form>
+                {/* <h2>Upload Image Profile</h2>
+                <input type='file' name='file' onChange={handleImage} />
+                <button onClick={handleApi}>Submit</button> */}
+                <form onSubmit={handleSubmit} encType="multipart/form-data" >
+                    <div className="mb-3">
+                        <label className="form-label">Image :</label><br/>
+                        <input type='file' className="form-control" name="image" onChange={e => setImage(e.target.files[0])} />
+                    </div>
+                    <br/>
+                    <button type="submit" className="btn btn-success">Submit</button>
+                </form>
+            </div>
         </div>
 
     )

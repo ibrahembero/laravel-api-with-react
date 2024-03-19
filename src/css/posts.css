@@ -1,0 +1,19 @@
+.header-main-posts{
+    background-color: #1E232C;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+.main-content-posts .card-content{
+    background-color: #1E232C;
+    color: white;
+    border-radius: 10px;
+}
+.smoothie-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}

@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../AuthContext';
 import axios from 'axios';
+import "../css/editPost.css"
+import Nav from '../otherComponents/Nav';
 
 function EditPost(){
 
@@ -57,21 +59,26 @@ function EditPost(){
 };
 
     return (
-        <div className='container'>
-            {authContext.auth ? <div className='container'><h1>Welcome To Our Website</h1></div> : <Navigate to={'/login'}/>}
-            <h1>Edit Post with ID {id}</h1>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label className="form-label"> Name :</label><br/>
-                    <input type={'name'} className="form-control" name="name" defaultValue={post ?post.name: ''} />
-                   </div>
-                <div className="mb-3">
-                    <label className="form-label">Description :</label><br/>
-                    <input type={'description'} className="form-control" name="description" defaultValue={post ? post.description : ''}  />
-                   </div>
-                <br/>
-                <button type="submit" className="btn btn-success">Update</button>
-            </form>
+        <div className='main-edit-post'>
+            <Nav />
+            <div className='container content-edit-post'>
+                <div className='container'>
+                    {authContext.auth ? <h1>Welcome To Our Website</h1> : <Navigate to={'/login'}/>}
+                    <h1>Edit Post with ID {id}</h1>
+                </div>
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                        <label className="form-label"> Name :</label><br/>
+                        <input type={'name'} className="form-control" name="name" defaultValue={post ?post.name: ''} />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label">Description :</label><br/>
+                        <input type={'description'} className="form-control" name="description" defaultValue={post ? post.description : ''}  />
+                    </div>
+                    <br/>
+                    <button type="submit" className="btn btn-success">Update</button>
+                </form>
+            </div>
         </div>
     )
 }

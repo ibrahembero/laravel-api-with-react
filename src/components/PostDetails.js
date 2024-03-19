@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
 import axios from "axios";
+import "../css/postDetails.css"
 
 import { Link, useNavigate } from "react-router-dom";
 
@@ -37,8 +38,8 @@ export default function PostDetails(props){
     }
 
     return (
-        <div>
-            <div className="card card-width" >
+        
+            <div className="card card-width card-content smoothie-card" >
                 <div className="card-body" >
                 {/* <h5>{id}</h5> */}
                 <h5 className="card-title">{props.name}</h5>
@@ -47,16 +48,16 @@ export default function PostDetails(props){
                 <p className="card-text">{props.description}</p>
                 {/* <p>{props.user_id}</p> */}
                 {props.user_auth_id === props.user_id ?
-                    <div>
-                        <Link className="btn btn-success"  to={`/edit/${id}`}>Edit</Link>
-                        <button className="btn btn-danger" onClick={()=>handleDelete(id)} >delete</button>
+                    <div className="buttons">
+                        <Link className=""  to={`/edit/${id}`}><i className="material-icons edit-link">edit</i></Link>
+                        <i className="material-icons delete-link" onClick={()=>handleDelete(id)} >delete</i>
+                        {/* <button className="btn btn-danger" onClick={()=>handleDelete(id)} >delete</button> */}
                     </div>
                     : <p></p>}
                 
                 </div>
             </div>
-            <hr/>
-        </div>
+          
         
     )
 }
